@@ -1,0 +1,396 @@
+.header {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header button {
+  display: none;
+}
+
+.header__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 5.8%;
+  border-bottom: 1px solid #f6f5f4;
+}
+
+.header__logo {
+  font-size: 0;
+  line-height: 0;
+  padding-top: 15px;
+}
+
+.header__logo[href="index.html"] {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+}
+
+.header__search label {
+  margin-right: 10px;
+}
+
+.header__top input,
+.header__top input::placeholder {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9b9997;
+}
+
+.header__top input {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  border: none;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid #a87b62;
+    cursor: pointer;
+  }
+}
+
+.header__nav {
+  min-height: 60px;
+}
+
+.header__nav ul {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__tools {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__tools a {
+  display: block;
+  margin-left: 36px;
+  padding: 5px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1d1613;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.header__tools .header__login {
+  margin-left: 92px;
+}
+
+.header__bag span:last-of-type {
+  margin-left: 2px;
+}
+
+@media (min-width: 1024px) {
+  .header__nav .header__main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 13px 7.17%;
+  }
+
+  .header__main-menu a {
+    display: block;
+    margin: 0;
+    padding: 5px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1d1613;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .header__main-menu li {
+    margin-right: 35px;
+  }
+
+  .header__main-menu li:last-child {
+    margin-right: 0;
+  }
+
+  .header__main-menu li:first-child {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header__top {
+    position: relative;
+    padding: 30px 5.86%;
+    border-bottom: none;
+  }
+
+  .header--closed .header__search,
+  .header--closed .header__login {
+    display: none;
+  }
+
+  .header--closed .header__nav {
+    min-height: 0;
+  }
+
+  .header--opened {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 0 5.86% 106px;
+    background-color: #a87b62;
+    overflow-y: auto;
+  }
+
+  .header button {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .header button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 18px;
+    background-image: url("../img/icon-menu_burger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .header--opened .header__top {
+    padding: 30px 0 122px;
+  }
+
+  .header--opened .header__logo {
+    filter: brightness(0) invert(1);
+  }
+
+  .header--opened .header__search {
+    position: absolute;
+    top: 136px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header__search label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-40%);
+    margin-right: 0;
+  }
+
+  .header__search svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header__top input::placeholder {
+    color: transparent;
+  }
+
+  .header__top input {
+    padding: 9.5px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 21px;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+    }
+  }
+
+  .header--opened ul {
+    display: block;
+    padding: 0 0 19px;
+  }
+
+  .header__main-menu a {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 11px;
+    padding: 5px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .header__service-menu a {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 10px;
+    padding: 5px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.75);
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .header__tools a {
+    margin-left: 8px;
+  }
+
+  .header--opened .header__login {
+    position: absolute;
+    top: 677px;
+    left: 0;
+    display: block;
+    margin: 0;
+    padding: 5px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #ffffff;
+  }
+
+  .header__bag {
+    position: relative;
+    width: 20px;
+    height: 18px;
+  }
+
+  .header__bag span {
+    display: none;
+  }
+
+  .header__bag::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -1px;
+    width: 20px;
+    height: 18px;
+    background-image: url("../img/icon-shop_bag.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .header--opened svg,
+  .header--opened button::before,
+  .header--opened .header__bag::after {
+    filter: brightness(0) invert(1);
+  }
+
+  .header--nojs button {
+    display: none;
+  }
+
+  .header--opened.header--nojs {
+    position: static;
+    display: block;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__top {
+    padding: 20px 4.6875%;
+  }
+
+  .header__logo img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .header--opened {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 0 4.69% 76px;
+  }
+
+  .header--opened .header__top {
+    padding: 20px 0 102px;
+  }
+
+
+  .header--opened .header__search {
+    top: 102px;
+  }
+
+  .header--opened ul {
+    padding: 0 0 10px;
+  }
+
+  .header__tools .header__login {
+    top: 612px;
+  }
+}

@@ -525,7 +525,7 @@ button.swiper-pagination-bullet {
           backface-visibility: hidden;
 }
 
-@media (max-width: $tablet-width-only) {
+@media (max-width: 1023px) {
   .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 15px 0 7px;
   }
