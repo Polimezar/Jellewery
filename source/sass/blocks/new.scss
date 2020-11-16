@@ -1,0 +1,27 @@
+.new {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.new__product-slider {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0 6.076% 94px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1023px) {
+  .new__product-slider {
+    padding: 0 3.906% 63px;
+  }
+}
+
+@media (max-width: 767px) {
+  .new__product-slider {
+    padding: 30px 0 53px;
+  }
+}
