@@ -71,7 +71,7 @@
   background-size: 50%;
   background-position: right center;
 
-  @media (min-resolution: 144dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background: #f0eae4 url("../img/main-power_of_crystals-desktop@2x.jpg") center no-repeat;
     background-size: 50%;
     background-position: right center;
@@ -84,7 +84,7 @@
   background-size: 50%;
   background-position: left center;
 
-  @media (min-resolution: 144dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background: #f0eae4 url("../img/main-to_care-desktop@2x.jpg") center no-repeat;
     background-size: 50%;
     background-position: left center;
