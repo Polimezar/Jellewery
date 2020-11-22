@@ -48,7 +48,6 @@
     height: auto;
     margin: 0 0 19px;
   }
-
 }
 
 @media (max-width: 767px) {
@@ -58,7 +57,8 @@
     margin: 0 0 14px;
   }
 
-  .product h3, .product p {
-    margin: -7px 0 12px
+  .product h3,
+  .product p {
+    margin: -7px 0 12px;
   }
 }

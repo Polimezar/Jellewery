@@ -43,13 +43,13 @@
   margin: 15px 15px 20px;
 }
 
-.catalog__paganation {
+.catalog__pagination {
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
 }
 
-.catalog__paganation a {
+.catalog__pagination a {
   display: block;
   margin: 0;
   padding: 5px;
@@ -70,20 +70,20 @@
   }
 }
 
-.catalog__paganation ol {
+.catalog__pagination ol {
   display: flex;
   margin: 0 30px 0 0;
   padding: 0;
   list-style: none;
 }
 
-.catalog__paganation .catalog__paganation-number {
+.catalog__pagination .catalog__pagination-number {
   display: block;
   margin: 0 3px 0 0;
   color: #9b9997;
 }
 
-.catalog__paganation .catalog__paganation-number--active {
+.catalog__pagination .catalog__pagination-number--active {
   color: #1d1613;
 
   &:hover,
@@ -140,19 +140,19 @@
     margin: 15px 15px 10px;
   }
 
-  .catalog__paganation {
+  .catalog__pagination {
     justify-content: center;
   }
 
-  .catalog__paganation ol {
+  .catalog__pagination ol {
     margin: 0;
   }
 
-  .catalog__paganation a {
+  .catalog__pagination a {
     display: none;
   }
 
-  .catalog__paganation .catalog__paganation-number {
+  .catalog__pagination .catalog__pagination-number {
     display: block;
     margin: 0 7px 0 6px;
   }

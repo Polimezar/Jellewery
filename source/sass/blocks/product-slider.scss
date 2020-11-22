@@ -47,6 +47,16 @@
   position: static;
 }
 
+.product-slider__swiper-container button {
+  border: none;
+  background-color: transparent;
+}
+
+.product-slider__swiper-container button:active,
+.product-slider__swiper-container button:focus {
+  outline: none;
+}
+
 .product-slider .swiper-button-prev,
 .product-slider .swiper-button-next {
   position: absolute;
