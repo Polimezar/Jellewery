@@ -68,7 +68,7 @@
           <button class="filters__open-button" type="button">Filter</button>
           <form class="filters__form pop-up" action="https://echo.htmlacademy.ru/" method="post">
             <div class="filters__wrapper">
-              <div>
+              <div class="filters__item">
                 <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
                   <legend>Product</legend>
                   <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked>
@@ -81,7 +81,7 @@
                   <label class="filter__fieldset-label" for="earrings">Earrings</label>
                 </fieldset>
               </div>
-              <div>
+              <div class="filters__item">
                 <fieldset class="filters__fieldset" tabindex="0">
                   <legend>Material</legend>
                   <input class="visually-hidden" id="gold" type="checkbox" name="gold">
@@ -90,7 +90,7 @@
                   <label class="filter__fieldset-label" for="Silver">Silver</label>
                 </fieldset>
               </div>
-              <div>
+              <div class="filters__item">
                 <fieldset class="filters__fieldset" tabindex="0">
                   <legend>Collection</legend>
                   <input class="visually-hidden" id="Pink" type="checkbox" name="Pink">
@@ -99,7 +99,7 @@
                   <label class="filter__fieldset-label" for="Dreams">Dreams</label>
                 </fieldset>
               </div>
-              <div>
+              <div class="filters__item">
                 <fieldset class="filters__fieldset filters__fieldset--active">
                   <legend>Price</legend>
                   <div class="filters__range-wrapper">
@@ -107,8 +107,8 @@
                       <div class="filters__scale">
                         <div class="filters__bar"></div>
                       </div>
-                      <button class="filters__toggle filters__toggle-min"></button>
-                      <button class="filters__toggle filters__toggle-max"></button>
+                      <button class="filters__toggle filters__toggle-min" type="button" disabled></button>
+                      <button class="filters__toggle filters__toggle-max" type="button" disabled></button>
                     </div>
                     <div class="filters__price-controls">
                       <input class="filters__toggle-min visually-hidden" type="text" name="min-price" value="55" id="filters-min-price">
@@ -122,7 +122,7 @@
             </div>
             <button class="filters__close-button" type="button"><span class="visually-hidden">Close filters windiw</span></button>
             <button type="submit">Apply</button>
-            <button class="filters__clear-button" type="button">Clear All</button>
+            <button class="filters__clear-button" type="reset">Clear All</button>
           </form>
         </div>
         <div class="catalog__product-list">
@@ -298,24 +298,6 @@
         </div>
       </div>
     </section>
-
-    <section class="pop-up pop-up-login">
-      <h2>Log In</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required>
-        <label for="usermail" class="visually-hidden">Your E-mail</label>
-        <input id="password" type="password" name="password" placeholder="Password" required>
-        <label for="password" class="visually-hidden">Password</label>
-        <a href="#">Forgot your password?</a>
-        <button type="submit">Log In</button>
-        <div>
-          <span>Don’t have an account?</span>
-          <a href="#">Sign up</a>
-        </div>
-      </form>
-      <button class="pop-up-login__close-button" type="button"><span class="visually-hidden">Close Window</span></button>
-    </section>
-
   </main>
 
   <footer class="footer">
@@ -328,7 +310,7 @@
             <label for="mail"><span class="visually-hidden">Your mail</span></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required>
           </form>
-          <button type="submit" href="#">
+          <button type="submit">
             <span>Sign Up</span>
             <svg width="32" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_right"></use></svg>
           </button>
@@ -376,6 +358,23 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal modal--login">
+    <h2 class="modal__title">Log In</h2>
+    <button class="modal__button-close" type="button"><span class="visually-hidden">Close</span></button>
+    <forma action="https://echo.htmlacademy.ru"method= "post">
+      <label class="visually-hidden" for="email">Email</label>
+      <input class="modal__input modal__email" type="email" name="email" placeholder="Your E−mail" id="email" required>
+      <div class= "modal__password-wrapper">
+        <label class="visually-hidden" for="password">Password</label>
+        <input class="modal__input modal__password" type="password" name="password" placeholder="Password" id="password" required>
+        <a href= "#"> >Forgot your password?</a>
+      </div>
+      <button class="modal__button button button--submit" type="submit">Log In</button>
+    </form>
+    <p>Don’t have an account?</p>
+    <a class="modal__sign-up" href="#">Sign up</a>
+  </div>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

@@ -14,8 +14,6 @@
 </head>
 
 <body>
-  <div class="overlay"></div>
-
   <header class="header header--nojs header--opened">
     <div class="header__top">
       <button type="button">
@@ -249,16 +247,16 @@
       <h2>Blog</h2>
       <a class="blog__link" href="#">Read All</a>
       <div class="blog__wrapper">
-        <div>
+        <div class="blog__container">
           <article class="blog__article">
-            <div>
+            <div class="blog__article-item">
               <time datetime="2019-09-30">September 30, 2019</time>
               <h3>How to care for your jewellery</h3>
               <a href="#">Read Article</a>
             </div>
           </article>
           <article class="blog__article">
-            <div>
+            <div class="blog__article-item">
               <time datetime="2019-09-23">September 23, 2019</time>
               <h3>Power of<br class="br-tablet"> crystals</h3>
               <a href="#">Read Article</a>
@@ -266,7 +264,7 @@
           </article>
         </div>
         <article class="blog__article">
-          <div>
+          <div class="blog__article-item--1">
             <time datetime="2019-09-16">September 16, 2019</time>
             <h3>AW 19 trends</h3>
             <a href="#">Read Article</a>
@@ -360,24 +358,6 @@
         </div>
       </div>
     </section>
-
-    <section class="pop-up pop-up-login">
-      <h2>Log In</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required="">
-        <label for="usermail" class="visually-hidden">Your E-mail</label>
-        <input id="password" type="password" name="password" placeholder="Password" required="">
-        <label for="password" class="visually-hidden">Password</label>
-        <a href="#">Forgot your password?</a>
-        <button type="submit">Log In</button>
-        <div>
-          <span>Don’t have an account?</span>
-          <a href="#">Sign up</a>
-        </div>
-      </form>
-      <button class="pop-up-login__close-button" type="button"><span class="visually-hidden">Close window</span></button>
-    </section>
-
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
@@ -388,7 +368,7 @@
           <form>
             <label for="mail"><span class="visually-hidden">Your Mail</span></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
-            <button type="submit" href="#">
+            <button type="submit">
               <span>Sign Up</span>
               <svg width="32" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_right"></use></svg>
             </button>
@@ -437,6 +417,25 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal modal--login">
+    <h2 class="modal__title">Log In</h2>
+    <button class="modal__button-close" type="button"><span class="visually-hidden">Close</span></button>
+    <forma action="https://echo.htmlacademy.ru" method="post">
+      <label class="visually-hidden" for="email">Email</label>
+      <input class="modal__input modal__email" type="email" name="email" placeholder="Your E−mail" id="email" required="">
+      <div class="modal__password-wrapper">
+        <label class="visually-hidden" for="password">Password</label>
+        <input class="modal__input modal__password" type="password" name="password" placeholder="Password" id="password" required="">
+        <a href="#"> >Forgot your password?</a>
+      </div>
+      <button class="modal__button button button--submit" type="submit">Log In</button>
+    
+    <p>Don’t have an account?</p>
+    <a class="modal__sign-up" href="#">Sign up</a>
+  </forma></div>
+
+  <div class="overlay"></div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -1,5 +1,74 @@
 'use strict';
 
+// открытие/закрытие окна Login
+(function () {
+  var body = document.querySelector('body');
+  var buttons = document.querySelectorAll('.header__login');
+  var buttonClose = document.querySelector('.modal__button-close');
+  var popup = document.querySelector('.modal--login');
+  var overlay = document.querySelector('.overlay');
+  var password = document.querySelector('.modal__password');
+  var email = document.querySelector('.modal__email');
+  var storageMail = '';
+
+  var onPopupEscPress = function (evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      closePopup(popup, overlay, buttonClose);
+    }
+  };
+
+  var onOutsideOfPopupClick = function (evt) {
+    evt.preventDefault();
+    closePopup(popup, overlay, buttonClose);
+  };
+
+  var onButtonCloseClick = function (evt) {
+    evt.preventDefault();
+    closePopup(popup, overlay, buttonClose);
+  };
+
+  var openPopup = function (modalPopup, modalOverlay, modalButtonClose) {
+    modalPopup.classList.add('modal--show');
+    modalOverlay.classList.add('overlay--show');
+
+    modalOverlay.addEventListener('click', onOutsideOfPopupClick);
+
+    modalButtonClose.addEventListener('click', onButtonCloseClick);
+
+    document.addEventListener('keydown', onPopupEscPress);
+
+    body.classList.add('body-lock');
+  };
+
+  var closePopup = function (modalPopup, modalOverlay, modalButtonClose) {
+    modalPopup.classList.remove('modal--show');
+    modalOverlay.classList.remove('overlay--show');
+
+    modalOverlay.removeEventListener('click', onOutsideOfPopupClick);
+
+    modalButtonClose.removeEventListener('click', onButtonCloseClick);
+
+    document.removeEventListener('keydown', onPopupEscPress);
+
+    body.classList.remove('body-lock');
+  };
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openPopup(popup, overlay, buttonClose);
+
+      if (storageMail) {
+        email.value = storageMail;
+        password.focus();
+      } else {
+        email.focus();
+      }
+    });
+  }
+})();
+
 (function () {
   // открытие/закрытие модального окна
   var body = document.querySelector('body');
@@ -42,51 +111,6 @@
       }
     });
   };
-
-  // открытие/закрытие окна Login
-  var openLoginButton = document.querySelector('.header__login');
-  var loginPopUp = document.querySelector('.pop-up-login');
-  var closeLoginButton = loginPopUp.querySelector('.pop-up-login__close-button');
-  var loginEmail = loginPopUp.querySelector('[name=usermail]');
-  var loginSubmitButton = loginPopUp.querySelector('[type=submit]');
-
-  localStorage.email = '';
-
-  var isStorageSupport = true;
-  var storage = '';
-
-  try {
-    storage = localStorage.getItem('loginEmail');
-  } catch (err) {
-    isStorageSupport = false;
-  }
-
-  openLoginButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    openPopup(loginPopUp);
-
-    if (storage) {
-      loginEmail.value = localStorage.name;
-    }
-
-    loginEmail.focus();
-  });
-
-
-  closeLoginButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    closePopup();
-  });
-
-  background.addEventListener('click', function () {
-    closePopup();
-  });
-
-  loginSubmitButton.addEventListener('click', function () {
-    if (isStorageSupport) {
-      localStorage.setItem('email', loginEmail.value);
-    }
-  });
 
   // открытие/закрытие меню в мобильной версии
 
