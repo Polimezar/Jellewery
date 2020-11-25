@@ -72,31 +72,31 @@
                 <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
                   <legend>Product</legend>
                   <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked>
-                  <label class="filter__fieldset-label" for="necklaces">Necklaces</label>
+                  <label class="filters__fieldset-label" for="necklaces">Necklaces</label>
                   <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked>
-                  <label class="filter__fieldset-label" for="chokers">Chokers</label>
+                  <label class="filters__fieldset-label" for="chokers">Chokers</label>
                   <input class="visually-hidden" id="rings" type="checkbox" name="rings">
-                  <label class="filter__fieldset-label" for="rings">Rings</label>
+                  <label class="filters__fieldset-label" for="rings">Rings</label>
                   <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked>
-                  <label class="filter__fieldset-label" for="earrings">Earrings</label>
+                  <label class="filters__fieldset-label" for="earrings">Earrings</label>
                 </fieldset>
               </div>
               <div class="filters__item">
                 <fieldset class="filters__fieldset" tabindex="0">
                   <legend>Material</legend>
                   <input class="visually-hidden" id="gold" type="checkbox" name="gold">
-                  <label class="filter__fieldset-label" for="gold">Gold</label>
+                  <label class="filters__fieldset-label" for="gold">Gold</label>
                   <input class="visually-hidden" id="Silver" type="checkbox" name="Silver">
-                  <label class="filter__fieldset-label" for="Silver">Silver</label>
+                  <label class="filters__fieldset-label" for="Silver">Silver</label>
                 </fieldset>
               </div>
               <div class="filters__item">
                 <fieldset class="filters__fieldset" tabindex="0">
                   <legend>Collection</legend>
                   <input class="visually-hidden" id="Pink" type="checkbox" name="Pink">
-                  <label class="filter__fieldset-label" for="Pink">Pink flamingo</label>
+                  <label class="filters__fieldset-label" for="Pink">Pink flamingo</label>
                   <input class="visually-hidden" id="Dreams" type="checkbox" name="Dreams">
-                  <label class="filter__fieldset-label" for="Dreams">Dreams</label>
+                  <label class="filters__fieldset-label" for="Dreams">Dreams</label>
                 </fieldset>
               </div>
               <div class="filters__item">
@@ -359,10 +359,10 @@
     </div>
   </footer>
 
-  <div class="modal modal--login">
+  <section class="modal modal--login">
     <h2 class="modal__title">Log In</h2>
     <button class="modal__button-close" type="button"><span class="visually-hidden">Close</span></button>
-    <forma action="https://echo.htmlacademy.ru"method= "post">
+    <form action="https://echo.htmlacademy.ru" method="post">
       <label class="visually-hidden" for="email">Email</label>
       <input class="modal__input modal__email" type="email" name="email" placeholder="Your E−mail" id="email" required>
       <div class= "modal__password-wrapper">
@@ -374,7 +374,7 @@
     </form>
     <p>Don’t have an account?</p>
     <a class="modal__sign-up" href="#">Sign up</a>
-  </div>
+  </section>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
