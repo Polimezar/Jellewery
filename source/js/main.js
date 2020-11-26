@@ -92,6 +92,7 @@
   var openPopup = function (modal) {
     modal.classList.add('pop-up--show');
     background.classList.add('overlay--show');
+
     body.classList.add('overflow');
     document.addEventListener('keydown', onPopupEscPress);
   };
@@ -215,10 +216,10 @@
     filter.classList.remove('filters--nojs');
 
     // открытие/скрытие fieldset
-    var fieldsets = filter.querySelectorAll('.filters__fieldset');
-    for (i = 0; i < fieldsets.length; i++) {
-      addTabsClickToggle(fieldsets[i], 'filters__fieldset--active');
-      addTabsEnterToggle(fieldsets[i], 'filters__fieldset--active');
+    var legends = filter.querySelectorAll('.filters__legend');
+    for (i = 0; i < legends.length; i++) {
+      addTabsClickToggle(legends[i], 'filters__legend--active');
+      addTabsEnterToggle(legends[i], 'filters__legend--active');
     }
 
     // очистка чекбоксов по кнопке Clear All
@@ -336,11 +337,15 @@
     openCartButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       openPopup(cartPopUp);
+      var background = document.querySelector('.overlay--show');
+      background.classList.add('overlay--cart');
     });
 
     closeCartButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       closePopup();
+      var background = document.querySelector('.overlay--show');
+      background.classList.remove('overlay--cart');
     });
   }
 })();

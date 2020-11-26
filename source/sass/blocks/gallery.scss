@@ -64,7 +64,7 @@
 
 .gallery__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  
   justify-content: center;
   align-items: flex-start;
   line-height: 0;
@@ -156,11 +156,17 @@
     margin-top: 2px;
   }
 
-  .gallery__picture-block--third {
-    flex-direction: row-reverse;
-  }
-
   .gallery__picture-block:last-child {
     display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .gallery__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .gallery__picture-block--third {
+    flex-direction: row-reverse;
   }
 }

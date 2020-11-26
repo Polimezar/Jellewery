@@ -23,7 +23,7 @@
 
 .card__gallery {
   display: flex;
-  min-width: 630px;
+  width: 52.5%;
 }
 
 .card__item--desktop-tablet-only {
@@ -195,7 +195,7 @@
 
   .card__wrapper {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 4.948%;
   }
 

@@ -6,7 +6,7 @@
   margin-left: -215px;
   position: fixed;
   z-index: 10;
-  width: 430px;
+  width: 340px;
   min-height: 586px;
   padding: 45px;
   padding-top: 189px;
@@ -142,6 +142,7 @@
   color: #1d1613;
   font-size: 14px;
   line-height: 21px;
+  margin-left: 5px;
 
   &:hover,
   &:focus {
@@ -160,22 +161,22 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
+  margin-left: 55px;
 }
 
 .modal__button {
   display: block;
   width: 100%;
-  padding: 10px;
-  padding-top: 9px;
-  border: none;
-  font-family: "Poppins", "Arial", sans-serif;
-  font-weight: 500;
+  height: 69px;
+  padding: 9px 10px 10px;
+  border: 0;
+  font-family: "Poppins","Arial",sans-serif;
   font-size: 16px;
-  line-height: 21px;
   text-align: center;
-  color: white;
+  color: #fff;
   background-color: #a87b62;
   cursor: pointer;
+  margin-top: 42px;
 
 
   &:hover,
@@ -197,7 +198,7 @@
 @media (max-width: 1023px) {
   .modal {
     margin-left: -221px;
-    width: 442px;
+    width: 340px;
     padding: 51px;
     padding-top: 189px;
     background: #f0eae4 url("../img/bg-log_in-tablet@1x.jpg") center top no-repeat;
@@ -232,6 +233,18 @@
   .modal input {
     padding-bottom: 9px;
   }
+
+  .modal__button {
+    margin-top: 43px;
+  }
+
+  .modal p {
+    margin-left: 60px;
+  }
+
+  .modal__sign-up {
+    margin-left: 1px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -239,7 +252,7 @@
     margin-top: -235px;
     margin-left: -135px;
     width: 270px;
-    min-height: 470px;
+    min-height: 240px;
     padding: 15px;
     padding-top: 120px;
     background: #f0eae4 url("../img/bg-log_in-mobile@1x.jpg") center top no-repeat;
@@ -290,9 +303,17 @@
     line-height: 32px;
   }
 
+  .modal p {
+    margin-left: 8px;
+  }
+
   .modal input {
     padding-bottom: 9px;
     margin-bottom: 20px;
+  }
+
+  .modal__sign-up {
+    margin-left: 2px;
   }
 
   .modal__password-wrapper a {
@@ -301,6 +322,8 @@
   }
 
   .modal__button {
+    margin-top: 37px;
+
     &--submit {
       padding-top: 25px;
       padding-bottom: 24px;
