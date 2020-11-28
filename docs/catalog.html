@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keywords" content="Магазин, ювелирный, украшения">
-  <meta name="description" content="Интернет-магазин ювелирных украшений">
+  <meta name="keywords" content="Shop, jewelry">
+  <meta name="description" content="Online Jewelry Store">
   <title>Jewellery</title>
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
@@ -19,13 +19,13 @@
   <header class="header header--nojs header--opened">
     <div class="header__top">
       <button type="button">
-        <span class="visually-hidden">Открыть/скрыть меню</span>
+        <span class="visually-hidden">Open/close menu</span>
       </button>
       <form class="header__search">
-        <label for="search"><span class="visually-hidden">Поиск</span>
+        <label for="search"><span class="visually-hidden">Search</span>
           <svg width="14" height="14"><use xlink:href="img/sprite_auto.svg#icon-loupe"></use></svg>
         </label>
-        <input id="search" type="text" name="search" placeholder="Type here to search">
+        <input id="search" type="search" name="search" placeholder="Type here to search">
       </form>
       <a class="header__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип CH" width="66" height="66">
@@ -55,7 +55,7 @@
   </header>
 
   <main class="main">
-    <h1 class="visually-hidden">Каталог</h1>
+    <h1 class="visually-hidden">Catalog</h1>
 
     <section class="topic topic--catalog">
       <h2>all jewellery</h2>
@@ -68,59 +68,61 @@
           <button class="filters__open-button" type="button">Filter</button>
           <form class="filters__form pop-up" action="https://echo.htmlacademy.ru/" method="post">
             <div class="filters__wrapper">
-              <div>
-                <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
-                  <legend>Product</legend>
+              <div class="filters__item">
+                <fieldset class="filters__fieldset" tabindex="0">
+                  <legend class="filters__legend filters__legend--active">Product</legend>
                   <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked="">
-                  <label for="necklaces">Necklaces</label>
+                  <label class="filters__fieldset-label" for="necklaces">Necklaces</label>
                   <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked="">
-                  <label for="chokers">Chokers</label>
+                  <label class="filters__fieldset-label" for="chokers">Chokers</label>
                   <input class="visually-hidden" id="rings" type="checkbox" name="rings">
-                  <label for="rings">Rings</label>
+                  <label class="filters__fieldset-label" for="rings">Rings</label>
                   <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked="">
-                  <label for="earrings">Earrings</label>
+                  <label class="filters__fieldset-label" for="earrings">Earrings</label>
                 </fieldset>
               </div>
-              <div>
+              <div class="filters__item">
                 <fieldset class="filters__fieldset" tabindex="0">
-                  <legend>Material</legend>
+                  <legend class="filters__legend">Material</legend>
                   <input class="visually-hidden" id="gold" type="checkbox" name="gold">
-                  <label for="gold">Gold</label>
+                  <label class="filters__fieldset-label" for="gold">Gold</label>
                   <input class="visually-hidden" id="Silver" type="checkbox" name="Silver">
-                  <label for="Silver">Silver</label>
+                  <label class="filters__fieldset-label" for="Silver">Silver</label>
                 </fieldset>
               </div>
-              <div>
+              <div class="filters__item">
                 <fieldset class="filters__fieldset" tabindex="0">
-                  <legend>Collection</legend>
+                  <legend class="filters__legend">Collection</legend>
                   <input class="visually-hidden" id="Pink" type="checkbox" name="Pink">
-                  <label for="Pink">Pink flamingo</label>
+                  <label class="filters__fieldset-label" for="Pink">Pink flamingo</label>
                   <input class="visually-hidden" id="Dreams" type="checkbox" name="Dreams">
-                  <label for="Dreams">Dreams</label>
+                  <label class="filters__fieldset-label" for="Dreams">Dreams</label>
                 </fieldset>
               </div>
-              <div>
-                <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
-                  <legend>Price</legend>
-                  <div class="filters__range-slider">
-                    <div class="filters__scale">
-                      <div class="filters__bar"></div>
-                      <div class="filters__range-slider-pin filters__range-slider-pin--min"></div>
-                      <div class="filters__range-slider-pin filters__range-slider-pin--max"></div>
+              <div class="filters__item">
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__legend filters__legend--active">Price</legend>
+                  <div class="filters__range-wrapper">
+                    <div class="filters__range-controls">
+                      <div class="filters__scale">
+                        <div class="filters__bar"></div>
+                      </div>
+                      <button class="filters__toggle filters__toggle-min" type="button" disabled=""></button>
+                      <button class="filters__toggle filters__toggle-max" type="button" disabled=""></button>
                     </div>
                     <div class="filters__price-controls">
-                      <span> $ </span>
-                      <input type="number" name="min" value="55">
-                      <span> $ </span>
-                      <input type="number" name="max" value="155">
+                      <input class="filters__toggle-min visually-hidden" type="text" name="min-price" value="55" id="filters-min-price">
+                      <label class="filters__price-label filters__price-label-min" for="filters-min-price">$ 55</label>
+                      <input class="filters__toggle-min visually-hidden" type="text" name="max-price" value="155" id="filters-max-price">
+                      <label class="filters__price-label filters__price-label-max" for="filters-max-price">$ 155</label>
                     </div>
                   </div>
                 </fieldset>
               </div>
-              <button class="filters__close-button" type="button"><span class="visually-hidden">Закрыть окно настройки фильтров</span></button>
-              <button type="submit">Apply</button>
-              <button class="filters__clear-button" type="button">Clear All</button>
             </div>
+            <button class="filters__close-button" type="button"><span class="visually-hidden">Close filters windiw</span></button>
+            <button type="submit">Apply</button>
+            <button class="filters__clear-button" type="reset">Clear All</button>
           </form>
         </div>
         <div class="catalog__product-list">
@@ -282,38 +284,20 @@
               </a>
             </li>
           </ul>
-          <div class="catalog__paganation">
+          <div class="catalog__pagination">
             <a href="#">Previous</a>
             <ol>
-              <li><a class="catalog__paganation-number catalog__paganation-number--active">1</a></li>
-              <li><a class="catalog__paganation-number" href="#">2</a></li>
-              <li><a class="catalog__paganation-number" href="#">3</a></li>
-              <li><a class="catalog__paganation-number" href="#">4</a></li>
-              <li><a class="catalog__paganation-number" href="#">5</a></li>
+              <li><a class="catalog__pagination-number catalog__pagination-number--active">1</a></li>
+              <li><a class="catalog__pagination-number" href="#">2</a></li>
+              <li><a class="catalog__pagination-number" href="#">3</a></li>
+              <li><a class="catalog__pagination-number" href="#">4</a></li>
+              <li><a class="catalog__pagination-number" href="#">5</a></li>
             </ol>
             <a href="#">Next</a>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="pop-up pop-up-login">
-      <h2>Log In</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required="">
-        <label for="usermail" class="visually-hidden">Your E-mail</label>
-        <input id="password" type="password" name="password" placeholder="Password" required="">
-        <label for="password" class="visually-hidden">Password</label>
-        <a href="#">Forgot your password?</a>
-        <button type="submit">Log In</button>
-        <div>
-          <span>Don’t have an account?</span>
-          <a href="#">Sign up</a>
-        </div>
-      </form>
-      <button class="pop-up-login__close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
-    </section>
-
   </main>
 
   <footer class="footer">
@@ -323,13 +307,13 @@
           <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
           <form>
-            <label for="mail"><span class="visually-hidden">Ваша почта</span></label>
+            <label for="mail"><span class="visually-hidden">Your mail</span></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
           </form>
-          <a href="#">
+          <button type="submit">
             <span>Sign Up</span>
             <svg width="32" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_right"></use></svg>
-          </a>
+          </button>
         </div>
         <div class="footer__menu">
           <ul>
@@ -374,6 +358,23 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal--login">
+    <h2 class="modal__title">Log In</h2>
+    <button class="modal__button-close" type="button"><span class="visually-hidden">Close</span></button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label class="visually-hidden" for="email">Email</label>
+      <input class="modal__input modal__email" type="email" name="email" placeholder="Your E−mail" id="email" required="">
+      <div class="modal__password-wrapper">
+        <label class="visually-hidden" for="password">Password</label>
+        <input class="modal__input modal__password" type="password" name="password" placeholder="Password" id="password" required="">
+        <a href="#"> >Forgot your password?</a>
+      </div>
+      <button class="modal__button button button--submit" type="submit">Log In</button>
+    </form>
+    <p>Don’t have an account?</p>
+    <a class="modal__sign-up" href="#">Sign up</a>
+  </section>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

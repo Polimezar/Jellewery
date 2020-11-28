@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keywords" content="Магазин, ювелирный, украшения">
-  <meta name="description" content="Интернет-магазин ювелирных украшений">
+  <meta name="keywords" content="Shop, jewelry">
+  <meta name="description" content="Online Jewelry Store">
   <title>Jewellery</title>
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
@@ -14,19 +14,18 @@
 </head>
 
 <body>
-  <div class="overlay-cart"></div>
   <div class="overlay"></div>
 
   <header class="header header--nojs header--opened">
     <div class="header__top">
       <button type="button">
-        <span class="visually-hidden">Открыть/скрыть меню</span>
+        <span class="visually-hidden">Open/close menu</span>
       </button>
       <form class="header__search">
-        <label for="search"><span class="visually-hidden">Поиск</span>
+        <label for="search"><span class="visually-hidden">Search</span>
           <svg width="14" height="14"><use xlink:href="img/sprite_auto.svg#icon-loupe"></use></svg>
         </label>
-        <input id="search" type="text" name="search" placeholder="Type here to search">
+        <input id="search" type="search" name="search" placeholder="Type here to search">
       </form>
       <a class="header__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип CH" width="66" height="66">
@@ -308,28 +307,11 @@
             </div>
           </div>
           <!-- Add Pagination -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <button class="swiper-button-next"></button>
+          <button class="swiper-button-prev"></button>
+          <button class="swiper-pagination"></button>
         </div>
       </div>
-    </section>
-
-    <section class="pop-up pop-up-login">
-      <h2>Log In</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required="">
-        <label for="usermail" class="visually-hidden">Your E-mail</label>
-        <input id="password" type="password" name="password" placeholder="Password" required="">
-        <label for="password" class="visually-hidden">Password</label>
-        <a href="#">Forgot your password?</a>
-        <button type="submit">Log In</button>
-        <div>
-          <span>Don’t have an account?</span>
-          <a href="#">Sign up</a>
-        </div>
-      </form>
-      <button class="pop-up-login__close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
 
     <section class="pop-up pop-up-add">
@@ -347,9 +329,9 @@
           <p>$ 115</p>
         </div>
         <div class="pop-up-add__quantity">
-          <button type="button"><span class="visually-hidden">Увеличить количество</span></button>
+          <button type="button"><span class="visually-hidden">Increase Quantity</span></button>
           <p>1</p>
-          <button type="button"><span class="visually-hidden">Уменьшить количество</span></button>
+          <button type="button"><span class="visually-hidden">Increase Quantity</span></button>
         </div>
       </div>
       <div class="pop-up-add__info">
@@ -360,7 +342,7 @@
         <a href="catalog.html">Continue shopping</a>
         <a href="#">Checkout</a>
       </div>
-      <button class="pop-up-add__close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+      <button class="pop-up-add__close-button" type="button"><span class="visually-hidden">Close Window</span></button>
     </section>
 
   </main>
@@ -372,13 +354,13 @@
           <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
           <form>
-            <label for="mail"><span class="visually-hidden">Ваша почта</span></label>
+            <label for="mail"><span class="visually-hidden">Your mail</span></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
           </form>
-          <a href="#">
+          <button type="submit">
             <span>Sign Up</span>
             <svg width="32" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_right"></use></svg>
-          </a>
+          </button>
         </div>
         <div class="footer__menu">
           <ul>
@@ -423,6 +405,23 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal--login">
+    <h2 class="modal__title">Log In</h2>
+    <button class="modal__button-close" type="button"><span class="visually-hidden">Close</span></button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label class="visually-hidden" for="email">Email</label>
+      <input class="modal__input modal__email" type="email" name="email" placeholder="Your E−mail" id="email" required="">
+      <div class="modal__password-wrapper">
+        <label class="visually-hidden" for="password">Password</label>
+        <input class="modal__input modal__password" type="password" name="password" placeholder="Password" id="password" required="">
+        <a href="#"> >Forgot your password?</a>
+      </div>
+      <button class="modal__button button button--submit" type="submit">Log In</button>
+    </form>
+    <p>Don’t have an account?</p>
+    <a class="modal__sign-up" href="#">Sign up</a>
+  </section>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

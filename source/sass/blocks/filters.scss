@@ -281,7 +281,7 @@
 
   .filters__open-button {
     display: block;
-    width: 96%;
+    width: 680px;
     margin: 0 auto;
     padding: 24px 24px 23px;
     font-style: normal;
@@ -490,8 +490,9 @@
   }
 
   .filters__open-button {
-    width: calc(100% - 30px);
+    width: 295px;
   }
+
   .filters__close-button {
     top: 20px;
     right: 16px;
