@@ -1297,7 +1297,7 @@ button.swiper-pagination-bullet {
     opacity: 0.5; }
 
 .footer__social svg {
-  margin: 0px 6px 0 0;
+  margin: 0 6px 0 0;
   width: 21px;
   height: 21px;
   vertical-align: middle; }
@@ -2041,7 +2041,7 @@ button.swiper-pagination-bullet {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-left: -14px; }
+  margin-left: -1px; }
 
 .gallery__picture-block img {
   margin: 15px; }
